@@ -1,0 +1,7 @@
+blinker
+python_dotenv
+watchdog
+flask
+flask_restful
+requests
+psycopg2-binary
