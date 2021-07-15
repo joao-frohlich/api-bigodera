@@ -1,12 +1,18 @@
-from flask_restful import Resource
+from flask_restful import Resource, reqparse
 from math import log, gcd
 
+post_parser = reqparse.RequestParser()
+post_parser.add_argument('number1')
+post_parser.add_argument('number2')
+post_parser.add_argument('operation')
+
 class Calculadora(Resource):
-    def get(self, x, op, y):
+    def post(self):
         try:
-            number1 = float(x)
-            number2 = float(y)
-            operation = op
+            args = post_parser.parse_args()
+            number1 = float(args['number1'])
+            number2 = float(args['number2'])
+            operation = args['operation']
             text = ''
             if operation=='+':
                 text = number1+number2
@@ -14,25 +20,25 @@ class Calculadora(Resource):
                 text = number1-number2
             elif operation=='*':
                 text = number1*number2
-            elif operation=='fdiv':
+            elif operation=='/':
                 if number2==0:
                     text = "Você quebrou as regras!"
                 else:
                     text = number1/number2
-            elif operation=='idiv':
+            elif operation=='//':
                 if number2==0:
                     text = 'Você quebrou as regras!'
                 else:
                     text = number1//number2
-            elif operation=='xor':
+            elif operation=='^':
                 text = int(number1)^int(number2)
-            elif operation=='and':
+            elif operation=='&':
                 text = int(number1)&int(number2)
-            elif operation=='or':
+            elif operation=='|':
                 text = int(number1)|int(number2)
             elif operation=='**':
                 text = number1**number2;
-            elif operation=='mod':
+            elif operation=='%':
                 text = number1%number2
             elif operation=='log':
                 text = log(number2, number1)
