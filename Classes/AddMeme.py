@@ -8,7 +8,7 @@ class AddMeme(Resource):
     def post(self):
         db = Database()
         try:
-            db.insert('meme', 'cod_meme, texto_meme', '1, \'' + post_parser.parse_args()['new_meme'] + '\'')
+            db.insert('meme', 'texto_meme', '\'' + post_parser.parse_args()['new_meme'] + '\'')
             return {1: 'Meme inserido com sucesso'}
         except:
             return {1: 'Falha ao adicionar novo meme ;-;'}
