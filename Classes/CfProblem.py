@@ -54,7 +54,7 @@ class CfProblem(Resource):
             rating = int(args['rating'])
             tags = ''
             if (args['tags'] != None):
-                tags = args['rating'].split(' ')
+                tags = args['tags'].split(' ')
             print('a')
             if args['id_discord'] != None:
                 existent_user = db.get('handle', 'usuario', 'id_discord = ' + args['id_discord'])
