@@ -17,7 +17,7 @@ class User(Resource):
                     return {1: 'ID Discord ja cadastrado'}
                 existent_user = db.get('handle, id_discord', 'usuario', 'handle = \'' + args['handle'] + '\'')
                 if existent_user == []:
-                    db.insert('usuario', 'cod_usuario, handle, id_discord', '1, \''+args['handle']+'\', ' + str(int(args['id_discord'])))
+                    db.insert('usuario', 'handle, id_discord', '\''+args['handle']+'\', ' + str(int(args['id_discord'])))
                     return {1: 'Usuario inserido com sucesso'}
                 elif existent_user[0][1] == None:
                     db.update('usuario', 'id_discord = ' + str(int(args['id_discord'])), 'handle = \'' + args['handle'] + '\'')
@@ -30,7 +30,7 @@ class User(Resource):
                     return {1: 'ID Telegram ja cadastrado'}
                 existent_user = db.get('handle, id_telegram', 'usuario', 'handle = \'' + args['handle']  + '\'')
                 if existent_user == []:
-                    db.insert('usuario', 'cod_usuario, handle, id_telegram', '1, \''+args['handle']+'\', ' + str(int(args['id_telegram'])))
+                    db.insert('usuario', 'handle, id_telegram', '\''+args['handle']+'\', ' + str(int(args['id_telegram'])))
                     return {1: 'Usuario inserido com sucesso'}
                 elif existent_user[0][1] == None:
                     db.update('usuario', 'id_telegram = ' + str(int(args['id_telegram'])), 'handle = \'' + args['handle'] + '\'')
