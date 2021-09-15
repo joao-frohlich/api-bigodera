@@ -1,9 +1,9 @@
 # API Bigodera
 
 ## Overview
-This is a simple python API created with the initial purpose to centralize the actions performed in common by the two bots created by members of the (BRUTE Competitive Programming)[bruteudesc.com] for (Discord)[https://github.com/EMachad0/BigoderaDiscord-Bot] and (Telegram)[https://github.com/VGasparini/bigodera-bot].
+This is a simple python API created with the initial purpose to centralize the actions performed in common by the two bots created by members of the [BRUTE Competitive Programming](bruteudesc.com) for [Discord](https://github.com/EMachad0/BigoderaDiscord-Bot) and [Telegram](https://github.com/VGasparini/bigodera-bot).
 
-Currently, the API is hosted on (Heroku)[https://api-bigodera.herokuapp.com/]. While the given URL gives a 404 response, you can see how to use in the following section
+Currently, the API is hosted on [Heroku](https://api-bigodera.herokuapp.com/). While the given URL gives a 404 response, you can see how to use in the following section
 
 ## Usage
 To use the bot, you have to create requests according to the methods of each function, as it is listed below:
@@ -54,7 +54,7 @@ First of all, remember to create branches to modify code, and after you have mad
 
 This instructions are for Linux users
 
-The development of this API runs on a python virtual enviroment (if you don't know what is a python virtual enviroment, I suggest you to read (this article)[https://www.geeksforgeeks.org/python-virtual-environment/]), which uses the version 3.8.10 of python.  
+The development of this API runs on a python virtual enviroment (if you don't know what is a python virtual enviroment, I suggest you to read [this article](https://www.geeksforgeeks.org/python-virtual-environment/)), which uses the version 3.8.10 of python.  
 
 After cloning this repository, you can access the pyenv with the command:  
 `source venv/bin/activate`
@@ -71,6 +71,6 @@ And finally, you can run the application with:
 `flask run`
 
 With this, you are able to test the program and every modification you make.  
-If you want more information about how the code works, I suggest the documentation of (Flask)[https://flask.palletsprojects.com/en/2.0.x/] and (Flask RESTful)[https://flask-restful.readthedocs.io/en/latest/].
+If you want more information about how the code works, I suggest the documentation of [Flask](https://flask.palletsprojects.com/en/2.0.x/) and [Flask RESTful](https://flask-restful.readthedocs.io/en/latest/).
 
-If there are any questions, you can contact me on (Telegram)[https://t.me/joaofrohlich]
+If there are any questions, you can contact me on [Telegram](https://t.me/joaofrohlich)
